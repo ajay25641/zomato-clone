@@ -1,0 +1,257 @@
+.header{
+    height: 50px;
+    background-color: red;
+    }
+    .header_logo{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        font-family: Poppins;
+        font-size: 45px;
+        margin-left: 1%;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-align:center;
+        color: #eb2929;
+        display: inline-block;
+      }
+      .login{
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.56;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .account{
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.56;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+      
+    .logo{
+      text-align: center;
+      font-size: 69px;
+      color: red;
+      background: white;
+      width: 105px;  
+      height: 108px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      margin-left: 46%;
+      font-family: Poppins;
+      font-weight: bold;
+      }
+      .headings {
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        position: relative;
+        margin: auto;
+        font-size: 36px;
+        top: -300px;
+    }
+      .locationSelector {
+        position: relative;
+        top: -300px;
+        margin-left: 30.5%;
+        margin-right: 20%;
+        text-align: center;
+    }
+    
+    .locationDropdown {
+        height: 40px;
+        width: 245px;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        opacity: 1;
+        margin-right: 21px;
+        margin-bottom: 25px;
+        float: left;
+    }
+    li {
+      list-style: none;
+      background-color: white;
+      padding: 10px 15px 10px 25px;
+      border: 1px solid #CCC;
+      box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+      margin-bottom: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    
+    #query {
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 19px;
+      padding: 5px;
+      font-family: calibri light;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      background-color: white;
+      padding-left: 5px;
+    }
+    #notebooks {
+      position: absolute;
+      left: 33%;
+      width: 350px;
+      border-radius: 5px;
+      max-height: 450px;
+      opacity: 1;
+      background-color: white;
+    }
+    
+    ul {
+      margin: 0 auto;
+      padding: 0;
+      max-height: 390px;
+      overflow-y: auto;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 5px 5px 0 5px;
+      border-left: none;
+      border-right: none;
+    }
+    
+    #notebooks span {
+      display: block;
+      position: absolute;
+      background: #FFD32E;
+      bottom: -35px;
+      left: -1px;
+      width: 360px;
+      border-radius: 0 0 5px 5px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: inset 1px 1px rgba(255, 255, 255, 0.5);
+    }
+    .restaurantsinput {
+        height: 40px;
+        width: 310px;
+        color:black;
+        border: none;
+        border-radius: 0px;
+        font-size: 15px;
+        opacity: 1;
+        float: left;
+        padding-left: 5px;
+    }
+    .quicksearch {
+      position: absolute;
+      margin-left: 5%;
+      margin-top: -35px;
+  }
+  
+  .quicksearchHeading {
+      text-align: left;
+      color: #192f60;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      padding-left: 35px;
+  }
+  
+  .quicksearchSubHeading {
+      text-align: left;
+      color: gray;
+      font-size: 18px;
+      font-weight: normal;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      padding-left: 35px;
+  }  
+     
+    
+    
+.item{
+    width: 360px;
+    height: 160px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    box-shadow: 0 3px 6px 0 red;
+    background-color: #ffffff;
+    padding: 0px;
+    float: left;
+  margin-right: 60px;
+  }
+.qs_options_sub_block_one{
+width: 45%;
+float: left;
+}
+.qs_options_sub_block_two{
+width: 53%;
+float: left;
+vertical-align: top;
+}
+.Breakfast{
+margin:0px;
+padding-left: 29px; 
+padding-top: 20px;
+font-family: Poppins;
+font-size: 23px;
+font-weight: 600;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: normal;
+text-align: left;
+color: #192f60;
+
+}
+.content{
+height: 62px;
+margin-top: 0px;
+padding-left: 29px;
+font-family: Poppins;
+font-size: 16px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: normal;
+text-align: left;
+color: #8c96ab;
+position:relative;
+top:3px;
+
+}
+
+@media only screen and (max-width: 1400px){
+
+.item{
+  margin-right: 10px;
+}
+
+}
+@media only screen and (max-width: 675px){
+    
+ .logo{
+   width: 60px;
+   height: 60px;
+   font-size: 55px;
+ }
+ 
+}
