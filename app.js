@@ -15,7 +15,7 @@ app.use("/", router);
 mongoose
   .connect(dbUrl, { useNewUrlParser: true })
   .then((res) => {
-    app.listen(PORT, host, () => {
+    app.listen(process.env.PORT || 2109, host, () => {
       console.log(`Server is running on ${host}:${PORT} `);
     });
   })
