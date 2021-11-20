@@ -25,7 +25,7 @@ exports.getRestaurantFilter = (req, res) => {
   location && (filterObj["location_id"] = location);
   cuisine && (filterObj["cuisine_id"] = {$in:cuisine} );
   mealtype_id && (filterObj["mealtype_id"] = mealtype_id);
-  console.log('after setting filterobj', filterObj);
+ 
   lcost && hcost && (filterObj["min_price"] = {$lte:hcost , $gte:lcost } );
    
  RestaurantFilter.find(filterObj)
