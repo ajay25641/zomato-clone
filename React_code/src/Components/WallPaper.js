@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Styles/home.css';
-import axios from 'axios';
+import axios from "../axios";
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 const WallPaper = ({ locationsData }) => {
@@ -26,7 +26,7 @@ const WallPaper = ({ locationsData }) => {
         const locationId = e.target.value;
         sessionStorage.setItem('locationId', locationId);
         axios({
-            url: `http://localhost:2109/getRestaurantByCity/${locationId}`,
+            url: `/getRestaurantByCity/${locationId}`,
             method: 'GET',
             headers: { 'Content-type': 'application/json' }
         }).then(res => {

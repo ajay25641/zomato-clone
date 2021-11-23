@@ -3,10 +3,11 @@ import '../Styles/details.css';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
-import axios from 'axios';
+import axios from '../axios';
 import Modal from 'react-modal';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+
 
 
 
@@ -42,7 +43,7 @@ const Details = () => {
     })
     useEffect(() => {
         axios({
-            url: `http://localhost:2109/getRestaurantById/${restaurant}`,
+            url: `/getRestaurantById/${restaurant}`,
             method: 'GET',
             headers: { 'Content-type': 'application/json' }
         }).then(res => {
@@ -52,8 +53,11 @@ const Details = () => {
     }, [restaurant])
 
     const handleOrderPlace = () => {
+      
+      
+
         axios({
-            url: `http://localhost:2109/menuitems/${restaurant}`,
+            url: `/menuitems/${restaurant}`,
             method: 'GET',
             headers: { 'Content-type': 'application/json' }
         }).then(res => {
@@ -78,9 +82,6 @@ const Details = () => {
     }
     }
     const handleItemQty = (index, operationType) => {
-        console.log('menuItems', menuItems);
-        console.log('index', index);
-        console.log('operation type', operationType);
         let total = 0;
         let items = [...menuItems];
         let item = items[index];
@@ -142,7 +143,7 @@ const Details = () => {
     }
 
    const getData = (data) => {
-        return fetch(`http://localhost:2109/payment`, {
+        return fetch(`https://zomato-express.herokuapp.com/payment`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -153,8 +154,6 @@ const Details = () => {
     }
 
   const Payments = () => {
-       
-
         const paymentObj = {
             amount: subTotal,
             email:userDetail.email,
@@ -170,17 +169,7 @@ const Details = () => {
     }
     return (
         <div>
-            <div className="header">
-                <div className="header_logo">
-                    <b>e!</b>
-                </div>
-
-                <div style={{ float: 'right', marginTop: '15px' }}>
-                    <div className="login">Login</div>
-                    <div className="account">Create an account</div>
-                </div>
-
-            </div>
+        
             <div>
                 <img src={restaurantData.image} alt="No Image, Sorry for the Inconvinience" width="100%" height="350px" />
 
@@ -321,7 +310,7 @@ const Details = () => {
                         })
                     }}
                          name='isPaymentFormOpen' value={false} ></div>
-                    <h3>restaurant.name</h3>
+                    <h3>{restaurantData.name}</h3>
                     <div>
                         <label className="form-label">Name</label>
                         <input style={{ width: '350px' }} className="form-control" type="text" placeholder="Enter Your Name"  name='name' onChange={(e)=>handleInputChange(e)} value={userDetail.name} />

@@ -2,8 +2,9 @@ import React from 'react'
 import '../Styles/filter.css';
 import { useEffect, useState } from 'react';
 import queryString from 'query-string';
-import axios from 'axios';
+import axios from "../axios";
 import { useLocation, useHistory } from 'react-router-dom';
+
 const Filter = () => {
     const qs = useLocation().search;
     const history = useHistory();
@@ -61,7 +62,7 @@ const Filter = () => {
     useEffect(() => {
 
         axios({
-            url: 'http://localhost:2109/locations',
+            url: '/locations',
             method: 'GET',
             headers: { 'Content-type': 'application/json' }
         }).then(res => {
@@ -69,13 +70,12 @@ const Filter = () => {
 
         }).catch(err => console.log(err))
         axios({
-            url: 'http://localhost:2109/filter',
+            url: '/filter',
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             data: filterObj,
 
         }).then((res) => {
-            console.log(res)
             setRestaurantData(res.data.restaurants);
             setPageCount(res.data.pages);
         }
@@ -86,17 +86,7 @@ const Filter = () => {
     }, [filterObj])
     return (
         <div>
-            <div className="header">
-                <div className="header_logo">
-                    <b>e!</b>
-                </div>
-
-                <div style={{ float: 'right', marginTop: '15px' }}>
-                    <div className="login">Login</div>
-                    <div className="account">Create an account</div>
-                </div>
-
-            </div>
+        
 
             <div>
                 <div id="myId" className="heading">Breakfast Places in Mumbai</div>
