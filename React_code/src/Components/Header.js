@@ -39,7 +39,7 @@ const customStyles = {
     const responseGoogle = (res) => {
         setLoginModalState(false);
         if (res.error) {
-            alert(res.error)
+          console.log(res.error);
         }
         else {
             setUserDetail({
@@ -91,7 +91,7 @@ const customStyles = {
             >
                 <div>
                     <GoogleLogin
-                        clientId="806545419625-n069acdru8dnn9jbemrc6nhhn1cd4hgr.apps.googleusercontent.com"
+                        clientId="806545419625-o24vtiqs51evht7gsqe5obpik9408f47.apps.googleusercontent.com"
                         buttonText="Continue with Google"
                         onSuccess={responseGoogle}
                         onFailure={responseGoogle}
