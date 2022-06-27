@@ -8,9 +8,7 @@ const host = "0.0.0.0";
 const dbUrl =
   "mongodb+srv://developer_ajk:ajay@12345@cluster0.c65dz.mongodb.net/zomato_DB?retryWrites=true&w=majority";
 const app = express();
-app.use(cors({
-  origin:"*",
-}));
+app.use(cors());
 app.use(express.json());
 app.use("/", router);
 
